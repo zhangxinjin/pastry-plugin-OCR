@@ -37,8 +37,8 @@
         </config-file>
 
         <!-- 添加js代码的示例 -->
-        <js-module src="www/scanOCR.js" name="scanOCR">
-            <clobbers target="OCRManager" />
+        <js-module src="www/PTScanOCR.js" name="scanOCR">
+            <clobbers target="PTOCRManager" />
         </js-module>
 
         <!-- 添加代码文件的示例 -->
