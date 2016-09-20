@@ -1,0 +1,20 @@
+{
+  "name": "pastry-plugin-OCR",
+  "version": "1.0.0",
+  "description": "this is a OCR for ios",
+  "cordova": {
+    "id": "pastry-plugin-OCR",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pastryTeam/pastry-plugin-ORC.git"
+  },
+  "keywords": [
+    "ORC"
+  ],
+  "author": "wuxingjie123",
+  "license": "MIT"
+}
