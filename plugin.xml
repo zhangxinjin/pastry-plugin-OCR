@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="pastry-plugin-OCR"
+        version="1.0.0">
+
+    <name>pastry-plugin-OCR</name>
+    <description> is a</description>
+    <license>MIT</license>
+    <keywords>OCR</keywords>
+    <repo>https://github.com/pastryTeam/pastry-plugin-OCR.git</repo>
+    <issue>https://github.com/pastryTeam/pastry-plugin-OCR/issues</issue>
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ScanOCR">
+                <param name="ios-package" value="PTScanOCR"/>
+            </feature>
+        </config-file>
+
+        <!-- 添加js代码的示例 -->
+        <js-module src="www/scanOCR.js" name="scanOCR">
+            <clobbers target="OCRManager" />
+        </js-module>
+
+        <!-- 添加代码文件的示例 -->
+        <header-file src="src/ios/PTScanOCR.h" />
+        <source-file src="src/ios/PTScanOCR.m" />
+        <header-file src="src/ios/IDCardViewController.h" />
+        <source-file src="src/ios/IDCardViewController.m" />
+        <header-file src="src/ios/OCR/libexidcard/commondef.h" target-dir="OCR/libexidcard" />
+        <source-file src="src/ios/OCR/libexidcard/dicts/zocr0.lib" target-dir="OCR/libexidcard/dicts" />
+        <header-file src="src/ios/OCR/libexidcard/excards.h" target-dir="OCR/libexidcard" />
+        <source-file src="src/ios/OCR/libexidcard/libexidcardios.a" framework="true" target-dir="OCR/libexidcard" />
+        <header-file src="src/ios/OCR/Model/Capture.h" target-dir="OCR/Model" />
+        <source-file src="src/ios/OCR/Model/Capture.m" target-dir="OCR/Model" />
+        <header-file src="src/ios/OCR/Model/IdInfo.h" target-dir="OCR/Model" />
+        <source-file src="src/ios/OCR/Model/IdInfo.m" target-dir="OCR/Model" />
+        <header-file src="src/ios/OCR/Model/UserDefaults.h" target-dir="OCR/Model" />
+        <source-file src="src/ios/OCR/Model/UserDefaults.m" target-dir="OCR/Model" />
+        <header-file src="src/ios/OCR/View/QuartzHelpLibrary.h" target-dir="OCR/View" />
+        <source-file src="src/ios/OCR/View/QuartzHelpLibrary.m" target-dir="OCR/View" />
+        <!-- 添加图片资源的示例 -->
+        <!--<resource-file src="src/ios/icon.png" />-->
+        <!--<resource-file src="src/ios/CDVCapture.bundle" />-->
+        <!--添加framework的示例-->
+        <!--<framework src="ImageIO.framework" weak="true" />-->
+
+    </platform>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="example">
+                <param name="android-package" value="package.example"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/example.java" target-dir="src/package" />
+
+    </platform>
+
+</plugin>
