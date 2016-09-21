@@ -35,10 +35,10 @@
 >
 + 身份证识别
   + 方法  
-    ```OCRManager.scanOCR(params, completeCallback)```
+    ```PTOCRManager.scanOCR(params, completeCallback)```
   + 代码示例
   
-        OCRManager.scanOCR(["1001"], function (tx) {
+        PTOCRManager.scanOCR(["1001"], function (tx) {
         //返回身份证信息JSon串
                   console.log(tx);
                   });
