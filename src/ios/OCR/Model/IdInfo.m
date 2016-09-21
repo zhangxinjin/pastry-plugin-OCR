@@ -5,6 +5,9 @@
 //  Created by hxg on 14-10-10.
 //  Copyright (c) 2014年 hxg. All rights reserved.
 //
+#if TARGET_IPHONE_SIMULATOR
+
+#elif TARGET_OS_IPHONE
 
 #import "IdInfo.h"
 
@@ -53,3 +56,5 @@
 }
 
 @end
+
+#endif

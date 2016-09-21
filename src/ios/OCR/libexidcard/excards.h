@@ -1,6 +1,10 @@
 /************************************************************************/
 /* copyright                                                            */
 /************************************************************************/
+#if TARGET_IPHONE_SIMULATOR
+
+#elif TARGET_OS_IPHONE
+
 #ifndef __EX_CARDS_H__
 #define __EX_CARDS_H__
 
@@ -20,3 +24,4 @@ STD_API(int)	EXCARDS_RecoIDCardData(unsigned char *pbImage, int nWidth, int nHei
 
 #endif
 
+#endif

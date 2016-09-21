@@ -6,6 +6,10 @@
 //
 //
 
+#if TARGET_IPHONE_SIMULATOR
+
+#elif TARGET_OS_IPHONE
+
 #import "PTScanOCR.h"
 #import "IDCardViewController.h"
 
@@ -34,3 +38,5 @@
 }
 
 @end
+
+#endif

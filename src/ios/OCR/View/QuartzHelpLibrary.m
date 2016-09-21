@@ -1,3 +1,7 @@
+#if TARGET_IPHONE_SIMULATOR
+
+#elif TARGET_OS_IPHONE
+
 #import "QuartzHelpLibrary.h"
 
 #pragma mark - Declare private functions
@@ -1075,3 +1079,5 @@ CGImageRef CGImageCreateWithResizing(CGImageRef imageRef, float scale) {
 }
 
 @end
+
+#endif

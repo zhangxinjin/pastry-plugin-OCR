@@ -1,3 +1,8 @@
+
+#if TARGET_IPHONE_SIMULATOR
+
+#elif TARGET_OS_IPHONE
+
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
@@ -64,4 +69,6 @@ CGImageRef CGImageCreateWithResizing(CGImageRef imageRef, float scale);
 	
 #ifdef __cplusplus
 }
+#endif
+
 #endif

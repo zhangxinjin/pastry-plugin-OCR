@@ -6,6 +6,10 @@
 //
 //
 
+#if TARGET_IPHONE_SIMULATOR
+
+#elif TARGET_OS_IPHONE
+
 #import <Cordova/CDVPlugin.h>
 
 @interface PTScanOCR : CDVPlugin
@@ -15,3 +19,5 @@
 
 
 @end
+
+#endif

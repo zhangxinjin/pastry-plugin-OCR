@@ -6,6 +6,10 @@
 //  Copyright (c) 2014年 hxg. All rights reserved.
 //
 
+#if TARGET_IPHONE_SIMULATOR
+
+#elif TARGET_OS_IPHONE
+
 #import <UIKit/UIKit.h>
 #import "Capture.h"
 
@@ -26,3 +30,5 @@ typedef void(^InfoBlock)(NSDictionary *dic);
 @property (copy, nonatomic)InfoBlock block;
 
 @end
+
+#endif

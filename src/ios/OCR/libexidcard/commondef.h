@@ -2,6 +2,10 @@
 /* copyright                                                            */
 /* version 1.1    修改TPoint  TRect 的数据类型为int                     */
 /************************************************************************/
+#if TARGET_IPHONE_SIMULATOR
+
+#elif TARGET_OS_IPHONE
+
 #ifndef __COMMON_DEF_H__
 #define __COMMON_DEF_H__
 
@@ -171,3 +175,5 @@ typedef struct TRect_
 //////////////////////////////////////////////////////////////////////////
 
 #endif //__COMMON_DEF_H__
+
+#endif

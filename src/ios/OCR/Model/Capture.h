@@ -6,6 +6,10 @@
 //  Copyright (c) 2014年 hxg. All rights reserved.
 //
 
+#if TARGET_IPHONE_SIMULATOR
+
+#elif TARGET_OS_IPHONE
+
 #import <CoreMedia/CoreMedia.h>
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
@@ -52,3 +56,5 @@
 - (void)addVideoPreviewLayer;
 
 @end
+
+#endif
