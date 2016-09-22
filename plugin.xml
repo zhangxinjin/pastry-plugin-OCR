@@ -69,12 +69,12 @@
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="example">
-                <param name="android-package" value="package.example"/>
+            <feature name="PTScanOCR">
+                <param name="android-package" value="asp.citic.ptframework.plugin.PTScanOCR"/>
             </feature>
         </config-file>
 
-        <source-file src="src/android/example.java" target-dir="src/package" />
+        <source-file src="src/android/PTScanOCR.java" target-dir="src/asp/citic/ptframework/plugin/OCR" />
 
     </platform>
 
