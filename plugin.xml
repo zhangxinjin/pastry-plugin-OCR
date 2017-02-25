@@ -69,8 +69,8 @@
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="PTScanOCR">
-                <param name="android-package" value="asp.citic.ptframework.plugin.ocr.PTScanOCR"/>
+            <feature name="OcrIdCard">
+                <param name="android-package" value="asp.citic.ptframework.plugin.ocr.OcrIdCard"/>
             </feature>
         </config-file>
         <config-file target="res/values/colors.xml" parent="/*">
@@ -83,7 +83,7 @@
         </config-file>
 
 		<!-- 添加插件入口 -->
-		<source-file src="src/android/PTScanOCR.java" target-dir="src/asp/citic/ptframework/plugin/ocr" />
+		<source-file src="src/android/OcrIdCard.java" target-dir="src/asp/citic/ptframework/plugin/ocr" />
 
 		<!-- 添加插件所需权限 -->
 		<config-file target="AndroidManifest.xml" parent="/*/application">
@@ -107,24 +107,24 @@
 		<lib-file src="src/android/res/libexidcard.so" target-dir="libs/armeabi" />
 		<lib-file src="src/android/res/libexidcard.so" target-dir="libs/armeabi-v7a" />
 		<!-- 添加插件功能文件 -->
-		<source-file src="src/android/com/exidcard/camera/AutoFocusCallback.java" target-dir="src/asp/citic/ptframework/plugin/ocr/exidcard/camera" />
-		<source-file src="src/android/com/exidcard/camera/CameraConfigurationManager.java" target-dir="src/asp/citic/ptframework/plugin/ocr/exidcard/camera" />
-		<source-file src="src/android/com/exidcard/camera/CameraManager.java" target-dir="src/asp/citic/ptframework/plugin/ocr/exidcard/camera" />
-		<source-file src="src/android/com/exidcard/camera/FlashlightManager.java" target-dir="src/asp/citic/ptframework/plugin/ocr/exidcard/camera" />
-		<source-file src="src/android/com/exidcard/camera/PictureCallback.java" target-dir="src/asp/citic/ptframework/plugin/ocr/exidcard/camera" />
-		<source-file src="src/android/com/exidcard/camera/PreviewCallback.java" target-dir="src/asp/citic/ptframework/plugin/ocr/exidcard/camera" />
+		<source-file src="src/android/com/exidcard/camera/AutoFocusCallback.java" target-dir="src/com/exidcard/camera" />
+		<source-file src="src/android/com/exidcard/camera/CameraConfigurationManager.java" target-dir="src/com/exidcard/camera" />
+		<source-file src="src/android/com/exidcard/camera/CameraManager.java" target-dir="src/com/exidcard/camera" />
+		<source-file src="src/android/com/exidcard/camera/FlashlightManager.java" target-dir="src/com/exidcard/camera" />
+		<source-file src="src/android/com/exidcard/camera/PictureCallback.java" target-dir="src/com/exidcard/camera" />
+		<source-file src="src/android/com/exidcard/camera/PreviewCallback.java" target-dir="src/com/exidcard/camera" />
 		
-		<source-file src="src/android/com/exidcard/decoding/CaptureActivityHandler.java" target-dir="src/asp/citic/ptframework/plugin/ocr/exidcard/decoding" />
-		<source-file src="src/android/com/exidcard/decoding/DecodeHandler.java" target-dir="src/asp/citic/ptframework/plugin/ocr/exidcard/decoding" />
-		<source-file src="src/android/com/exidcard/decoding/DecodeThread.java" target-dir="src/asp/citic/ptframework/plugin/ocr/exidcard/decoding" />
-		<source-file src="src/android/com/exidcard/decoding/FinishListener.java" target-dir="src/asp/citic/ptframework/plugin/ocr/exidcard/decoding" />
-		<source-file src="src/android/com/exidcard/decoding/InactivityTimer.java" target-dir="src/asp/citic/ptframework/plugin/ocr/exidcard/decoding" />
+		<source-file src="src/android/com/exidcard/decoding/CaptureActivityHandler.java" target-dir="src/com/exidcard/decoding" />
+		<source-file src="src/android/com/exidcard/decoding/DecodeHandler.java" target-dir="src/com/exidcard/decoding" />
+		<source-file src="src/android/com/exidcard/decoding/DecodeThread.java" target-dir="src/com/exidcard/decoding" />
+		<source-file src="src/android/com/exidcard/decoding/FinishListener.java" target-dir="src/com/exidcard/decoding" />
+		<source-file src="src/android/com/exidcard/decoding/InactivityTimer.java" target-dir="src/com/exidcard/decoding" />
 		
-		<source-file src="src/android/com/exidcard/view/ViewfinderView.java" target-dir="src/asp/citic/ptframework/plugin/ocr/exidcard/view" />
+		<source-file src="src/android/com/exidcard/view/ViewfinderView.java" target-dir="src/com/exidcard/view" />
 		
-		<source-file src="src/android/com/exidcard/CaptureActivity.java" target-dir="src/asp/citic/ptframework/plugin/ocr/exidcard" />
-		<source-file src="src/android/com/exidcard/ExIDCardReco.java" target-dir="src/asp/citic/ptframework/plugin/ocr/exidcard" />
-		<source-file src="src/android/com/exidcard/ExIDCardResult.java" target-dir="src/asp/citic/ptframework/plugin/ocr/exidcard" />
+		<source-file src="src/android/com/exidcard/CaptureActivity.java" target-dir="src/com/exidcard" />
+		<source-file src="src/android/com/exidcard/ExIDCardReco.java" target-dir="src/com/exidcard" />
+		<source-file src="src/android/com/exidcard/ExIDCardResult.java" target-dir="src/com/exidcard" />
         <!-- 添加插件资源文件 -->
 		<resource-file src="src/android/res/activity_exid_card.xml" target="res/layout/activity_exid_card.xml" />
 		<resource-file src="src/android/res/ids.xml" target="res/values/ids.xml" />
